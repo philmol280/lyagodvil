@@ -9,7 +9,10 @@
     <Grid>
         <TabControl>
             <TabItem Header="Отладка персонажа">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="debug" Content="Диагностировать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="10,190,0,0"/>
+                    <TextBlock x:Name="debugtext" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="115,194,0,0" Width="561"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Генерация персонажа">
                 <Grid Background="#FFE5E5E5">
