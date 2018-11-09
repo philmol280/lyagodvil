@@ -34,9 +34,22 @@
                     <Button x:Name="addwhose" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Margin="591,326,0,0"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Движуха на улице"/>
-            <TabItem Header="Движуха дома"/>
-            <TabItem Header="Журнал"/>
+            <TabItem Header="Движуха на улице">
+            <Grid Background="#FFE5E5E5">
+                    <RadioButton Content="RadioButton" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,42,0,0"/>
+                    <RadioButton Content="RadioButton" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,62,0,0"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Движуха дома">
+            <Grid Background="#FFE5E5E5">
+            </Grid>
+            </TabItem>
+            <TabItem Header="Журнал">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox x:Name="perslog" HorizontalAlignment="Left" Height="371" VerticalAlignment="Top" Width="381" Margin="10,10,0,0"/>
+                    <ListBox x:Name="femlog" HorizontalAlignment="Left" Height="371" VerticalAlignment="Top" Width="380" Margin="396,10,0,0"/>
+                </Grid>
+            </TabItem>
         </TabControl>
 
     </Grid>
