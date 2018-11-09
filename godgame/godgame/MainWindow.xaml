@@ -13,18 +13,18 @@
             </TabItem>
             <TabItem Header="Генерация персонажа">
                 <Grid Background="#FFE5E5E5">
-                    <TextBox Height="23" TextWrapping="Wrap" Margin="116,358,220,10" VerticalAlignment="Bottom"/>
+                    <TextBox x:Name="saveline" Height="23" TextWrapping="Wrap" Margin="116,358,220,10" VerticalAlignment="Bottom"/>
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Файл сохранения" VerticalAlignment="Bottom" Margin="10,0,0,10" TextAlignment="Center"/>
-                    <Button Content="Button" Margin="571,358,115,10" Height="23" VerticalAlignment="Bottom"/>
-                    <Button Content="Button" Margin="676,358,10,10" Height="23" VerticalAlignment="Bottom"/>
-                    <ListBox HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="185" Margin="10,63,0,0"/>
-                    <ListBox Margin="200,63,401,38" Width="185"/>
-                    <ListBox Margin="401,63,200,38" Width="185"/>
-                    <ListBox Margin="591,63,10,38" Width="185"/>
-                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,42,0,0"><Run Text="TextBlock"/></TextBlock>
-                    <TextBlock TextWrapping="Wrap" Text="TextBlock" Margin="200,42,536,333"/>
-                    <TextBlock TextWrapping="Wrap" Margin="401,42,335,333"><Run Text="TextBlock"/></TextBlock>
-                    <TextBlock TextWrapping="Wrap" Text="TextBlock" Margin="591,42,145,333"/>
+                    <Button x:Name="read2" Content="Button" Margin="571,358,115,10" Height="23" VerticalAlignment="Bottom"/>
+                    <Button x:Name="write2" Content="Button" Margin="676,358,10,10" Height="23" VerticalAlignment="Bottom"/>
+                    <ListBox x:Name="which" HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="185" Margin="10,63,0,0"/>
+                    <ListBox x:Name="who" Margin="200,63,401,38" Width="185"/>
+                    <ListBox x:Name="inwitch" Margin="401,63,200,38" Width="185"/>
+                    <ListBox x:Name="whose" Margin="591,63,10,38" Width="185"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,42,0,0" Text="Какой"/>
+                    <TextBlock TextWrapping="Wrap" Text="Кто" Margin="200,42,536,333"/>
+                    <TextBlock TextWrapping="Wrap" Margin="401,42,335,333" Text="В каком"/>
+                    <TextBlock TextWrapping="Wrap" Text="Чей" Margin="591,42,145,333"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Движуха на улице"/>
