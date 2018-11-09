@@ -28,10 +28,10 @@
                     <TextBlock TextWrapping="Wrap" Text="Кто" Margin="200,10,536,365"/>
                     <TextBlock TextWrapping="Wrap" Margin="401,10,335,365" Text="В каком"/>
                     <TextBlock TextWrapping="Wrap" Text="Чей" Margin="591,10,145,365"/>
-                    <Button x:Name="addwhich" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Margin="10,326,0,0"/>
-                    <Button x:Name="addwho" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Margin="200,326,0,0"/>
-                    <Button x:Name="addinwitch" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Margin="401,326,0,0"/>
-                    <Button x:Name="addwhose" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Margin="591,326,0,0"/>
+                    <Button x:Name="addwhich" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Margin="10,326,0,0" Click="addwhich_Click"/>
+                    <Button x:Name="addwho" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Margin="200,326,0,0" Click="addwho_Click"/>
+                    <Button x:Name="addinwitch" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Margin="401,326,0,0" Click="addinwitch_Click"/>
+                    <Button x:Name="addwhose" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Margin="591,326,0,0" Click="addwhose_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Движуха на улице">
