@@ -28,3 +28,11 @@ C:\Users\Mike\Downloads\lyagodvil-master\godgame\godgame\obj\Debug\godgame.cspro
 C:\Users\Mike\Downloads\lyagodvil-master\godgame\godgame\obj\Debug\godgame.csproj.CoreCompileInputs.cache
 C:\Users\Mike\Downloads\lyagodvil-master\godgame\godgame\obj\Debug\godgame.exe
 C:\Users\Mike\Downloads\lyagodvil-master\godgame\godgame\obj\Debug\godgame.pdb
+C:\Users\Kirill\Documents\GitHub\lyagodvil\godgame\godgame\bin\Debug\godgame.exe.config
+C:\Users\Kirill\Documents\GitHub\lyagodvil\godgame\godgame\obj\Debug\godgame.exe
+C:\Users\Kirill\Documents\GitHub\lyagodvil\godgame\godgame\obj\Debug\godgame.pdb
+C:\Users\Kirill\Documents\GitHub\lyagodvil\godgame\godgame\obj\Debug\godgame.csprojResolveAssemblyReference.cache
+C:\Users\Kirill\Documents\GitHub\lyagodvil\godgame\godgame\obj\Debug\MainWindow.g.cs
+C:\Users\Kirill\Documents\GitHub\lyagodvil\godgame\godgame\obj\Debug\App.g.cs
+C:\Users\Kirill\Documents\GitHub\lyagodvil\godgame\godgame\obj\Debug\godgame_MarkupCompile.cache
+C:\Users\Kirill\Documents\GitHub\lyagodvil\godgame\godgame\obj\Debug\godgame_MarkupCompile.lref
