@@ -20,7 +20,7 @@ namespace godgame
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        Random rnd = new Random();
         List<string> whichlist = new List<string>();
         List<string> wholist = new List<string>();
         List<string> whoselist = new List<string>();
@@ -61,6 +61,15 @@ namespace godgame
             whoselist.Add(saveline.Text);
             saveline.Text = "";
             whose.Items.Refresh();
+        }
+
+        private void debug_Click(object sender, RoutedEventArgs e)
+        {
+            int z = rnd.Next(0, whichlist.Count + 1);
+            int x = rnd.Next(0, wholist.Count + 1);
+            int c = rnd.Next(0, whoselist.Count + 1);
+            int v = rnd.Next(0, inwitchlist.Count + 1);
+            debugtext.Text = whichlist[z] + " " + wholist[x] + " " + whoselist[c] + " " + inwitchlist[v];
         }
     }
 }
