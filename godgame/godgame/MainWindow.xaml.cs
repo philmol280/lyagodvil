@@ -1,18 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace godgame
 {
@@ -74,18 +63,32 @@ namespace godgame
                 int v = rnd.Next(0, inwitchlist.Count);
                 debugtext.Text = whichlist[z] + " " + wholist[x] + " " + whoselist[c] + " " + inwitchlist[v];
             }
-            else debugtext.Text = "Ошибка, недостаточно данных для персонажа";
+            else MessageBox.Show("Недостаточно данных для персонажа, пожалуйста заполните листбоксы на второй вкладке", "Ошибка");
         }
 
         private void read2_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog myDialog = new OpenFileDialog();
-            myDialog.Filter = "Файлы игры(*.GOD)|*.GOD" + "|Все файлы (*.*)|*.* ";
-            myDialog.CheckFileExists = true;
-            myDialog.Multiselect = true;
+            myDialog.Filter = "Файлы игры(*.GOD)|*.GOD" + "|Все файлы (*.*)|*.* ";  // Фильтр файлов, через ; указывается расширение файла
+            myDialog.CheckFileExists = true; // Проверка на существование файла
+            myDialog.Multiselect = false; // Выбор нескольких файлов, нам возможно пригодится
             if (myDialog.ShowDialog() == true)
             {
-               
+               // Если файл выбран - читаем в листбоксы
+            }
+        }
+
+        private void write2_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog mySave = new SaveFileDialog();
+            mySave.FileName = "data.god";
+            mySave.Filter = "Файлы игры(*.GOD)|*.GOD" + "|Все файлы (*.*)|*.* ";
+            mySave.CheckFileExists = true;
+            Nullable<bool> result = mySave.ShowDialog();
+            if (result == true)
+            {
+                // Сохраняем данные из листбоксов
+                string filename = mySave.FileName;
             }
         }
     }
