@@ -65,11 +65,15 @@ namespace godgame
 
         private void debug_Click(object sender, RoutedEventArgs e)
         {
-            int z = rnd.Next(0, whichlist.Count + 1);
-            int x = rnd.Next(0, wholist.Count + 1);
-            int c = rnd.Next(0, whoselist.Count + 1);
-            int v = rnd.Next(0, inwitchlist.Count + 1);
-            debugtext.Text = whichlist[z] + " " + wholist[x] + " " + whoselist[c] + " " + inwitchlist[v];
+            if ((whichlist.Count != 0) && (wholist.Count != 0) && (whoselist.Count != 0) && (inwitchlist.Count != 0))
+            {
+                int z = rnd.Next(0, whichlist.Count);
+                int x = rnd.Next(0, wholist.Count);
+                int c = rnd.Next(0, whoselist.Count);
+                int v = rnd.Next(0, inwitchlist.Count);
+                debugtext.Text = whichlist[z] + " " + wholist[x] + " " + whoselist[c] + " " + inwitchlist[v];
+            }
+            else debugtext.Text = "Ошибка, недостаточно данных для персонажа";
         }
     }
 }
