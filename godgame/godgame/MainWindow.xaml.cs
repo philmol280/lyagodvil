@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -74,6 +75,18 @@ namespace godgame
                 debugtext.Text = whichlist[z] + " " + wholist[x] + " " + whoselist[c] + " " + inwitchlist[v];
             }
             else debugtext.Text = "Ошибка, недостаточно данных для персонажа";
+        }
+
+        private void read2_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog myDialog = new OpenFileDialog();
+            myDialog.Filter = "Файлы игры(*.GOD)|*.GOD" + "|Все файлы (*.*)|*.* ";
+            myDialog.CheckFileExists = true;
+            myDialog.Multiselect = true;
+            if (myDialog.ShowDialog() == true)
+            {
+               
+            }
         }
     }
 }
