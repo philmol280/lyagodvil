@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Windows;
 
@@ -99,28 +100,54 @@ namespace godgame
 
         private void Read2_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog myDialog = new OpenFileDialog();
-            myDialog.Filter = "Файлы игры(*.GOD)|*.GOD" + "|Все файлы (*.*)|*.* ";  // Фильтр файлов, через ; указывается расширение файла
-            myDialog.CheckFileExists = true; // Проверка на существование файла
-            myDialog.Multiselect = false; // Выбор нескольких файлов, нам возможно пригодится
-            if (myDialog.ShowDialog() == true)
+            if (File.Exists("list1.god"))
             {
-               // Если файл выбран - читаем в листбоксы
+                which.ItemsSource=File.ReadAllLines("list1.god");
+                which.Items.Refresh();
+            }
+            if (File.Exists("list2.god"))
+            {
+                who.ItemsSource = File.ReadAllLines("list2.god");
+                who.Items.Refresh();
+            }
+            if (File.Exists("list3.god"))
+            {
+                inwitch.ItemsSource = File.ReadAllLines("list3.god");
+                inwitch.Items.Refresh();
+            }
+            if (File.Exists("list4.god"))
+            {
+                whose.ItemsSource = File.ReadAllLines("list4.god");
+                whose.Items.Refresh();
+            }
+            else
+            {
+                MessageBox.Show("Файлы отсутсвуют", "Ошибка");
             }
         }
 
         private void Write2_Click(object sender, RoutedEventArgs e)
         {
-            SaveFileDialog mySave = new SaveFileDialog();
-            mySave.FileName = "data.god";
-            mySave.Filter = "Файлы игры(*.GOD)|*.GOD" + "|Все файлы (*.*)|*.* ";
-            mySave.CheckFileExists = true;
-            Nullable<bool> result = mySave.ShowDialog();
-            if (result == true)
-            {
-                // Сохраняем данные из листбоксов
-                string filename = mySave.FileName;
-            }
+                StreamWriter list1 = new StreamWriter("list1.god");
+                foreach (var item in which.Items)
+                    list1.WriteLine(item.ToString());
+                list1.Close();
+
+                StreamWriter list2 = new StreamWriter("list2.god");
+                foreach (var item in who.Items)
+                    list2.WriteLine(item.ToString());
+                list2.Close();
+
+                StreamWriter list3 = new StreamWriter("list3.god");
+                foreach (var item in inwitch.Items)
+                    list3.WriteLine(item.ToString());
+                list3.Close();
+
+                StreamWriter list4 = new StreamWriter("list4.god");
+                foreach (var item in whose.Items)
+                    list4.WriteLine(item.ToString());
+                list4.Close();
+            MessageBox.Show("Успешно сохранено", "ОК");
         }
     }
 }
