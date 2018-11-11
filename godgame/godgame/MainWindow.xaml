@@ -10,8 +10,17 @@
         <TabControl>
             <TabItem Header="Отладка персонажа">
                 <Grid Background="#FFE5E5E5">
-                    <Button x:Name="debug" Content="Диагностировать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="10,190,0,0" Click="debug_Click"/>
-                    <TextBlock x:Name="debugtext" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="115,194,0,0" Width="561"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="185*"/>
+                        <RowDefinition Height="22*"/>
+                        <RowDefinition Height="185*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40*"/>
+                        <ColumnDefinition Width="225*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="debug" Content="Диагностировать" Margin="10,0,5,0" Click="Debug_Click" Grid.Row="1" Height="22"/>
+                    <TextBlock x:Name="debugtext" TextWrapping="Wrap" Margin="0,0,115,0" Text="Здесь будет сгенерированная строка" Grid.Column="1" Grid.Row="1" TextAlignment="Center"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Генерация персонажа">
@@ -23,28 +32,28 @@
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="10*"/>
-                        <ColumnDefinition Width="182*"/>
-                        <ColumnDefinition Width="197*"/>
-                        <ColumnDefinition Width="193*"/>
-                        <ColumnDefinition Width="184*"/>
-                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="190*"/>
+                        <ColumnDefinition Width="190*"/>
+                        <ColumnDefinition Width="190*"/>
+                        <ColumnDefinition Width="190*"/>
+                        <ColumnDefinition Width="10*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="saveline" Height="23" TextWrapping="Wrap" Margin="105,0,26,10" VerticalAlignment="Bottom" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2"/>
-                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Поле для ввода" VerticalAlignment="Bottom" Margin="3,0,0,10" TextAlignment="Center" Grid.Column="1" Height="16" Width="86" Grid.Row="2"/>
-                    <Button x:Name="read2" Content="Открыть" Margin="176,0,102,10" Height="23" VerticalAlignment="Bottom" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="2" Click="read2_Click"/>
-                    <Button x:Name="write2" Content="Сохранить" Margin="85,0,0,10" Height="23" VerticalAlignment="Bottom" Grid.Column="4" Grid.Row="2" Click="write2_Click"/>
-                    <ListBox x:Name="which" Margin="0,31,10,0" Grid.Column="1" Height="289"/>
-                    <ListBox x:Name="who" Margin="5,31,5,0" Grid.Column="2" Height="289"/>
-                    <ListBox x:Name="inwitch" Margin="6,31,5,0" Grid.Column="3" Height="289"/>
-                    <ListBox x:Name="whose" Margin="5,31,0,0" Grid.Column="4" Height="289"/>
-                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="3,10,0,0" Text="Какой" Grid.Column="1" Height="16" Width="36"/>
-                    <TextBlock TextWrapping="Wrap" Text="Кто" Margin="7,10,151,293" Grid.Column="2"/>
-                    <TextBlock TextWrapping="Wrap" Margin="6,10,141,293" Text="В каком" Grid.Column="3"/>
-                    <TextBlock TextWrapping="Wrap" Text="Чей" Margin="3,10,132,293" Grid.Column="4"/>
-                    <Button x:Name="addwhich" Content="Добавить" Margin="0,10,0,0" Click="addwhich_Click" Grid.Column="1" Grid.Row="1" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="172"/>
-                    <Button x:Name="addwho" Content="Добавить" Margin="0,10,5,0" Click="addwho_Click" Grid.Column="2" Grid.Row="1" Height="23" VerticalAlignment="Top" HorizontalAlignment="Right" Width="187"/>
-                    <Button x:Name="addinwitch" Content="Добавить" Margin="6,10,0,0" Click="addinwitch_Click" Grid.Column="3" Grid.Row="1" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="182"/>
-                    <Button x:Name="addwhose" Content="Добавить" Margin="0,10,0,0" Click="addwhose_Click" Grid.Column="4" Grid.Row="1" Height="23" VerticalAlignment="Top" HorizontalAlignment="Right" Width="179"/>
+                    <TextBox x:Name="saveline" Height="23" TextWrapping="Wrap" Margin="105,0,26,10" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2"/>
+                    <TextBlock TextWrapping="Wrap" Text="Поле для ввода" Margin="0,4,91,13" TextAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+                    <Button x:Name="read2" Content="Открыть" Margin="170,0,112,10" Height="23" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="2" Click="Read2_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Button x:Name="write2" Content="Сохранить" Margin="91,0,0,10" Height="23" Grid.Column="4" Grid.Row="2" Click="Write2_Click"/>
+                    <ListBox x:Name="which" Margin="0,30,5,0" Grid.Column="1"/>
+                    <ListBox x:Name="who" Margin="5,30,5,0" Grid.Column="2"/>
+                    <ListBox x:Name="inwitch" Margin="5,30,5,0" Grid.Column="3"/>
+                    <ListBox x:Name="whose" Margin="5,30,0,0" Grid.Column="4"/>
+                    <TextBlock TextWrapping="Wrap" Margin="0,9,155,295" Text="Какой" Grid.Column="1"/>
+                    <TextBlock TextWrapping="Wrap" Text="Кто" Margin="5,8,153,295" Grid.Column="2"/>
+                    <TextBlock TextWrapping="Wrap" Margin="5,8,142,295" Text="В каком" Grid.Column="3"/>
+                    <TextBlock TextWrapping="Wrap" Text="Чей" Margin="5,8,130,295" Grid.Column="4"/>
+                    <Button x:Name="addwhich" Content="Добавить" Margin="0,5,5,10" Click="Addwhich_Click" Grid.Column="1" Grid.Row="1"/>
+                    <Button x:Name="addwho" Content="Добавить" Margin="5,5,5,10" Click="Addwho_Click" Grid.Column="2" Grid.Row="1"/>
+                    <Button x:Name="addinwitch" Content="Добавить" Margin="5,5,5,10" Click="Addinwitch_Click" Grid.Column="3" Grid.Row="1"/>
+                    <Button x:Name="addwhose" Content="Добавить" Margin="5,5,0,10" Click="Addwhose_Click" Grid.Column="4" Grid.Row="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Движуха на улице">
@@ -59,8 +68,12 @@
             </TabItem>
             <TabItem Header="Журнал">
                 <Grid Background="#FFE5E5E5">
-                    <ListBox x:Name="perslog" HorizontalAlignment="Left" Height="371" VerticalAlignment="Top" Width="381" Margin="10,10,0,0"/>
-                    <ListBox x:Name="femlog" HorizontalAlignment="Left" Height="371" VerticalAlignment="Top" Width="380" Margin="396,10,0,0"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="196*"/>
+                        <ColumnDefinition Width="196*"/>
+                    </Grid.ColumnDefinitions>
+                    <ListBox x:Name="perslog" Margin="10,15,5,10"/>
+                    <ListBox x:Name="femlog" Margin="5,15,10,10" Grid.Column="1"/>
                 </Grid>
             </TabItem>
         </TabControl>

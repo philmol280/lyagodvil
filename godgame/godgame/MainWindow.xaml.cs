@@ -25,35 +25,63 @@ namespace godgame
             inwitch.ItemsSource = inwitchlist;
         }
 
-        private void addwhich_Click(object sender, RoutedEventArgs e)
+        private void Addwhich_Click(object sender, RoutedEventArgs e)
         {
-            whichlist.Add(saveline.Text);
-            saveline.Text = "";
-            which.Items.Refresh();
+            if (saveline.Text=="")
+            {
+                MessageBox.Show("Вы не ввели данные!", "Ошибка");
+            }
+            else
+            {
+                whichlist.Add(saveline.Text);
+                saveline.Text = "";
+                which.Items.Refresh();
+            }
         }
 
-        private void addwho_Click(object sender, RoutedEventArgs e)
+        private void Addwho_Click(object sender, RoutedEventArgs e)
         {
-            wholist.Add(saveline.Text);
-            saveline.Text = "";
-            who.Items.Refresh();
+            if (saveline.Text == "")
+            {
+                MessageBox.Show("Вы не ввели данные!", "Ошибка");
+            }
+            else
+            {
+                wholist.Add(saveline.Text);
+                saveline.Text = "";
+                who.Items.Refresh();
+            }
         }
 
-        private void addinwitch_Click(object sender, RoutedEventArgs e)
+        private void Addinwitch_Click(object sender, RoutedEventArgs e)
         {
-            inwitchlist.Add(saveline.Text);
-            saveline.Text = "";
-            inwitch.Items.Refresh();
+            if (saveline.Text == "")
+            {
+                MessageBox.Show("Вы не ввели данные!", "Ошибка");
+            }
+            else
+            {
+                inwitchlist.Add(saveline.Text);
+                saveline.Text = "";
+                inwitch.Items.Refresh();
+            }
         }
 
-        private void addwhose_Click(object sender, RoutedEventArgs e)
+        private void Addwhose_Click(object sender, RoutedEventArgs e)
         {
-            whoselist.Add(saveline.Text);
-            saveline.Text = "";
-            whose.Items.Refresh();
+            if (saveline.Text == "")
+            {
+                MessageBox.Show("Вы не ввели данные!", "Ошибка");
+            }
+            else
+            {
+                whoselist.Add(saveline.Text);
+                saveline.Text = "";
+                whose.Items.Refresh();
+            }
         }
 
-        private void debug_Click(object sender, RoutedEventArgs e)
+        private void Debug_Click(object sender, RoutedEventArgs e)
         {
             if ((whichlist.Count != 0) && (wholist.Count != 0) && (whoselist.Count != 0) && (inwitchlist.Count != 0))
             {
@@ -63,10 +91,13 @@ namespace godgame
                 int v = rnd.Next(0, inwitchlist.Count);
                 debugtext.Text = whichlist[z] + " " + wholist[x] + " " + whoselist[c] + " " + inwitchlist[v];
             }
-            else MessageBox.Show("Недостаточно данных для персонажа, пожалуйста заполните листбоксы на второй вкладке", "Ошибка");
+            else
+            {
+                MessageBox.Show("Недостаточно данных для персонажа, пожалуйста внесите данные на второй вкладке!", "Ошибка");
+            }
         }
 
-        private void read2_Click(object sender, RoutedEventArgs e)
+        private void Read2_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog myDialog = new OpenFileDialog();
             myDialog.Filter = "Файлы игры(*.GOD)|*.GOD" + "|Все файлы (*.*)|*.* ";  // Фильтр файлов, через ; указывается расширение файла
@@ -78,7 +109,7 @@ namespace godgame
             }
         }
 
-        private void write2_Click(object sender, RoutedEventArgs e)
+        private void Write2_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog mySave = new SaveFileDialog();
             mySave.FileName = "data.god";
