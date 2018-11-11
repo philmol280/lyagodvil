@@ -20,7 +20,7 @@
                         <ColumnDefinition Width="225*"/>
                     </Grid.ColumnDefinitions>
                     <Button x:Name="debug" Content="Диагностировать" Margin="10,0,5,0" Click="Debug_Click" Grid.Row="1" Height="22"/>
-                    <TextBlock x:Name="debugtext" TextWrapping="Wrap" Margin="0,0,115,0" Text="Здесь будет сгенерированная строка" Grid.Column="1" Grid.Row="1" TextAlignment="Center"/>
+                    <TextBlock x:Name="debugtext" TextWrapping="Wrap" Margin="0,0,115,0" Text="Здесь будет сгенерированная строка" Grid.Column="1" Grid.Row="1" TextAlignment="Center" Height="22"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Генерация персонажа">
@@ -32,34 +32,58 @@
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="10*"/>
-                        <ColumnDefinition Width="190*"/>
-                        <ColumnDefinition Width="190*"/>
-                        <ColumnDefinition Width="190*"/>
-                        <ColumnDefinition Width="190*"/>
+                        <ColumnDefinition Width="105*"/>
+                        <ColumnDefinition Width="87*"/>
+                        <ColumnDefinition Width="192*"/>
+                        <ColumnDefinition Width="191*"/>
+                        <ColumnDefinition Width="192*"/>
                         <ColumnDefinition Width="10*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="saveline" Height="23" TextWrapping="Wrap" Margin="105,0,26,10" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2"/>
-                    <TextBlock TextWrapping="Wrap" Text="Поле для ввода" Margin="0,4,91,13" TextAlignment="Center" Grid.Row="2" Grid.Column="1"/>
-                    <Button x:Name="read2" Content="Открыть" Margin="170,0,112,10" Height="23" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="2" Click="Read2_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                    <Button x:Name="write2" Content="Сохранить" Margin="91,0,0,10" Height="23" Grid.Column="4" Grid.Row="2" Click="Write2_Click"/>
-                    <ListBox x:Name="which" Margin="0,30,5,0" Grid.Column="1"/>
-                    <ListBox x:Name="who" Margin="5,30,5,0" Grid.Column="2"/>
-                    <ListBox x:Name="inwitch" Margin="5,30,5,0" Grid.Column="3"/>
-                    <ListBox x:Name="whose" Margin="5,30,0,0" Grid.Column="4"/>
-                    <TextBlock TextWrapping="Wrap" Margin="0,9,155,295" Text="Какой" Grid.Column="1"/>
-                    <TextBlock TextWrapping="Wrap" Text="Кто" Margin="5,8,153,295" Grid.Column="2"/>
-                    <TextBlock TextWrapping="Wrap" Margin="5,8,142,295" Text="В каком" Grid.Column="3"/>
-                    <TextBlock TextWrapping="Wrap" Text="Чей" Margin="5,8,130,295" Grid.Column="4"/>
-                    <Button x:Name="addwhich" Content="Добавить" Margin="0,5,5,10" Click="Addwhich_Click" Grid.Column="1" Grid.Row="1"/>
-                    <Button x:Name="addwho" Content="Добавить" Margin="5,5,5,10" Click="Addwho_Click" Grid.Column="2" Grid.Row="1"/>
-                    <Button x:Name="addinwitch" Content="Добавить" Margin="5,5,5,10" Click="Addinwitch_Click" Grid.Column="3" Grid.Row="1"/>
-                    <Button x:Name="addwhose" Content="Добавить" Margin="5,5,0,10" Click="Addwhose_Click" Grid.Column="4" Grid.Row="1"/>
+                    <TextBox x:Name="saveline" Height="23" TextWrapping="Wrap" Margin="0,0,26,10" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="2"/>
+                    <TextBlock TextWrapping="Wrap" Text="Поле для ввода" Margin="0,0,0,10" Grid.Row="2" Grid.Column="1" TextAlignment="Center" Height="23"/>
+                    <Button x:Name="read2" Content="Открыть" Margin="170,0,112,10" Height="23" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="2" Click="Read2_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Button x:Name="write2" Content="Сохранить" Margin="91,0,0,10" Height="23" Grid.Column="5" Grid.Row="2" Click="Write2_Click"/>
+                    <ListBox x:Name="which" Margin="0,30,5,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <ListBox x:Name="who" Margin="5,30,5,0" Grid.Column="3"/>
+                    <ListBox x:Name="inwitch" Margin="5,30,5,0" Grid.Column="4"/>
+                    <ListBox x:Name="whose" Margin="5,30,0,0" Grid.Column="5"/>
+                    <TextBlock TextWrapping="Wrap" Margin="0,9,68,295" Text="Какой" Grid.Column="1"/>
+                    <TextBlock TextWrapping="Wrap" Text="Кто" Margin="5,8,153,295" Grid.Column="3"/>
+                    <TextBlock TextWrapping="Wrap" Margin="5,8,142,295" Text="В каком" Grid.Column="4"/>
+                    <TextBlock TextWrapping="Wrap" Text="Чей" Margin="5,8,130,295" Grid.Column="5"/>
+                    <Button x:Name="addwhich" Content="Добавить" Margin="0,5,5,10" Click="Addwhich_Click" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+                    <Button x:Name="addwho" Content="Добавить" Margin="5,5,5,10" Click="Addwho_Click" Grid.Column="3" Grid.Row="1"/>
+                    <Button x:Name="addinwitch" Content="Добавить" Margin="5,5,5,10" Click="Addinwitch_Click" Grid.Column="4" Grid.Row="1"/>
+                    <Button x:Name="addwhose" Content="Добавить" Margin="5,5,0,10" Click="Addwhose_Click" Grid.Column="5" Grid.Row="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Движуха на улице">
                 <Grid Background="#FFE5E5E5">
-                    <RadioButton Content="RadioButton" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,42,0,0"/>
-                    <RadioButton Content="RadioButton" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,62,0,0"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="23*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="135*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="181*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="55*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="335*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock TextWrapping="Wrap" Margin="5,5,3,5"><Run Text="Сколько прошел"/><Run Text=":"/></TextBlock>
+                    <TextBlock x:Name="step_count" TextWrapping="Wrap" Text="0" Margin="1,5,0,0" Grid.Column="1" Height="16" Width="6" VerticalAlignment="Top" HorizontalAlignment="Left" TextAlignment="Right"/>
+                    <RadioButton Content="Искать приключения" Margin="5,10,642,0" Grid.Row="2" VerticalAlignment="Top" Height="15" Grid.ColumnSpan="3"/>
+                    <RadioButton Content="Гулять" Margin="5,109,0,0" Grid.Row="2" VerticalAlignment="Top" Height="15"/>
+                    <RadioButton Content="Идти домой" VerticalAlignment="Top" Margin="5,30,0,0" Grid.Row="2" Height="15"/>
+                    <RadioButton Content="Жрать все что найдешь" VerticalAlignment="Top" Margin="5,50,630,0" Grid.Row="2" Height="15" Grid.ColumnSpan="3"/>
+                    <RadioButton Content="Поспать как бомж, потому что лень идти домой" VerticalAlignment="Top" Margin="5,70,496,0" Grid.Row="2" Height="15" Grid.ColumnSpan="3"/>
+                    <RadioButton Content="Деградировать" VerticalAlignment="Top" Margin="5,90,0,0" Grid.Row="2" Height="14"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="11,54,0,0" Grid.Row="4" Height="16" Width="50" Text="Хп"/>
+                    <TextBlock TextWrapping="Wrap" Margin="10,10,0,160" Grid.Row="4" Text="Съедено шаурм"/>
+                    <TextBlock TextWrapping="Wrap" Text="Броня" Margin="10,32,48,138" Grid.Row="4"/>
+                    <TextBlock TextWrapping="Wrap" Margin="11,75,10,96" Grid.Row="4" Text="Сожрать что-то"/>
+                    <TextBlock TextWrapping="Wrap" Text="ЧСВ" Margin="11,96,48,75" Grid.Row="4"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Движуха дома">
