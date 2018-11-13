@@ -102,7 +102,7 @@ namespace godgame
                 int x = rnd.Next(0, wholist.Count);
                 int c = rnd.Next(0, whoselist.Count);
                 int v = rnd.Next(0, inwitchlist.Count);
-                debugtext.Text = whichlist[z] + " " + wholist[x] + " " + whoselist[c] + " " + inwitchlist[v];
+                debugtext.Text = whichlist[z] + " " + wholist[x] + " " + inwitchlist[v] + " " + whoselist[c];
             }
             else
             {
