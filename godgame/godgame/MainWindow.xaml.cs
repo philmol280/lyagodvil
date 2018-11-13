@@ -16,7 +16,7 @@ namespace godgame
         List<string> wholist = new List<string>();
         List<string> whoselist = new List<string>();
         List<string> inwitchlist = new List<string>();
-
+        System.Windows.Threading.DispatcherTimer dispatcherTimer;
         public MainWindow()
         {
             InitializeComponent();
@@ -24,6 +24,18 @@ namespace godgame
             who.ItemsSource = wholist;
             whose.ItemsSource = whoselist;
             inwitch.ItemsSource = inwitchlist;
+
+            //              А ВОТ И ТАЙМЕР ПОДЪЕХАЛ)
+            dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(Clock);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
+
+        }
+
+        private void Clock(object sender, EventArgs e)
+        {
+            
         }
 
         private void Addwhich_Click(object sender, RoutedEventArgs e)
