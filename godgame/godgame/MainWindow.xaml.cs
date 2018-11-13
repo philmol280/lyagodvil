@@ -102,22 +102,26 @@ namespace godgame
         {
             if (File.Exists("list1.god"))
             {
-                which.ItemsSource=File.ReadAllLines("list1.god");
+                //which.ItemsSource=File.ReadAllLines("list1.god");
+                whichlist.AddRange(File.ReadAllLines("list1.god"));
                 which.Items.Refresh();
             }
             if (File.Exists("list2.god"))
             {
-                who.ItemsSource = File.ReadAllLines("list2.god");
+                //who.ItemsSource = File.ReadAllLines("list2.god");
+                wholist.AddRange(File.ReadLines("list2.god"));
                 who.Items.Refresh();
             }
             if (File.Exists("list3.god"))
             {
-                inwitch.ItemsSource = File.ReadAllLines("list3.god");
+                //inwitch.ItemsSource = File.ReadAllLines("list3.god");
+                inwitchlist.AddRange(File.ReadLines("list3.god"));
                 inwitch.Items.Refresh();
             }
             if (File.Exists("list4.god"))
             {
-                whose.ItemsSource = File.ReadAllLines("list4.god");
+                //whose.ItemsSource = File.ReadAllLines("list4.god");
+                whoselist.AddRange(File.ReadLines("list4.god"));
                 whose.Items.Refresh();
             }
             else

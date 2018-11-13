@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:godgame"
         mc:Ignorable="d"
         Title="Годвиль 3.0" Height="450" Width="800">
     <Grid>
@@ -74,21 +73,30 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock TextWrapping="Wrap" Margin="5,5,3,5"><Run Text="Сколько прошел"/><Run Text=":"/></TextBlock>
                     <TextBlock x:Name="step_count" TextWrapping="Wrap" Text="0" Margin="1,5,0,0" Grid.Column="1" Height="16" Width="6" VerticalAlignment="Top" HorizontalAlignment="Left" TextAlignment="Right"/>
-                    <RadioButton Content="Искать приключения" Margin="5,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="15" Grid.ColumnSpan="3"/>
+                    <RadioButton Content="Агрессивно разгуливать по своему двору" Margin="5,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="15" Grid.ColumnSpan="3"/>
                     <RadioButton Content="Гулять" Margin="5,109,0,0" Grid.Row="2" VerticalAlignment="Top" Height="15" Grid.ColumnSpan="3"/>
                     <RadioButton Content="Идти домой" VerticalAlignment="Top" Margin="5,30,0,0" Grid.Row="2" Height="15" Grid.ColumnSpan="3"/>
-                    <RadioButton Content="Жрать все, что найдешь" VerticalAlignment="Top" Margin="5,50,0,0" Grid.Row="2" Height="15" Grid.ColumnSpan="3"/>
+                    <RadioButton Content="Жрать все, что видишь" VerticalAlignment="Top" Margin="5,50,0,0" Grid.Row="2" Height="15" Grid.ColumnSpan="3"/>
                     <RadioButton Content="Поспать как бомж, потому что лень идти домой" VerticalAlignment="Top" Margin="5,70,0,0" Grid.Row="2" Height="15" Grid.ColumnSpan="3"/>
                     <RadioButton Content="Деградировать" VerticalAlignment="Top" Margin="5,90,0,0" Grid.Row="2" Height="14" Grid.ColumnSpan="3"/>
                     <TextBlock TextWrapping="Wrap" Margin="10,54,0,116" Grid.Row="4" Text="Хп"/>
-                    <TextBlock TextWrapping="Wrap" Margin="10,10,0,160" Grid.Row="4" Text="Съедено шаурм"/>
+                    <TextBlock TextWrapping="Wrap" Margin="10,10,88,160" Grid.Row="4" Grid.ColumnSpan="3"><Run Text="Съедено "/><Run Text="кошек, завернутых в лаваш"/></TextBlock>
                     <TextBlock TextWrapping="Wrap" Text="Броня" Margin="10,32,0,138" Grid.Row="4"/>
                     <TextBlock TextWrapping="Wrap" Margin="10,76,0,94" Grid.Row="4" Text="Сожрать что-то"/>
                     <TextBlock TextWrapping="Wrap" Text="ЧСВ" Margin="10,98,0,72" Grid.Row="4"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,120,0,0" Grid.Row="4" Grid.ColumnSpan="4" Width="345"><Run Text="Уровень усталости по шкале"/><Run Text=","/><Run Text=" "/><Run Text="просмотренных аниме"/><Run Text=","/><Run Text=" за ночь"/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Сытость" VerticalAlignment="Top" Margin="10,141,0,0" Grid.Row="4"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Движуха дома">
                 <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Сегодня на ужин" VerticalAlignment="Top" Margin="10,10,0,0"/>
+                    <RadioButton Content="Что то жидкое" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,31,0,0"/>
+                    <RadioButton Content="Шаурма" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,51,0,0"/>
+                    <RadioButton Content="Котлетка с пюрешкой" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,71,0,0"/>
+                    <RadioButton Content="Запчасти для шмота" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,91,0,0"/>
+                    <RadioButton Content="Целебный элексир" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,111,0,0"/>
+                    <RadioButton Content="Денег нет, но вы держитесь" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,131,0,0"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Журнал">
