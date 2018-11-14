@@ -41,31 +41,57 @@ namespace godgame
 
         private void Clock(object sender, EventArgs e)
         {
-            if (herodo1.IsChecked==true)
+            /*  if (herodo1.IsChecked==true)
+               {
+                   persloglist.Add("Агрессивно разгуливает по своему двору");
+               }
+               if (herodo2.IsChecked == true)
+               {
+                   persloglist.Add("Идет домой...");
+               }
+               if (herodo3.IsChecked == true)
+               {
+                   persloglist.Add("Жрет хрень, которую нашел");
+               }
+               if (herodo4.IsChecked == true)
+               {
+                   persloglist.Add("Спит на улице");
+               }
+               if (herodo5.IsChecked==true)
+               {
+                   persloglist.Add("Деградирует");
+               }
+               if (herodo6.IsChecked == true)
+               {
+                   persloglist.Add("Гуляет");
+               }
+               perslog.Items.Refresh();
+              */
+            int n = rnd.Next(1, 6);
+            switch (n)
             {
-                persloglist.Add("Агрессивно разгуливает по своему двору");
+                case 1:
+                    herodo1.IsChecked = true;
+                    break;
+                case 2:
+                    herodo2.IsChecked = true;
+                    break;
+                case 3:
+                    herodo3.IsChecked = true;
+                    break;
+                case 4:
+                    herodo4.IsChecked = true;
+                    break;
+                case 5:
+                    herodo5.IsChecked = true;
+                    break;
+                case 6:
+                    herodo6.IsChecked = true;
+                    break;
+                default:
+                    herodo5.IsChecked = true;
+                    break;
             }
-            if (herodo2.IsChecked == true)
-            {
-                persloglist.Add("Идет домой...");
-            }
-            if (herodo3.IsChecked == true)
-            {
-                persloglist.Add("Жрет хрень, которую нашел");
-            }
-            if (herodo4.IsChecked == true)
-            {
-                persloglist.Add("Спит на улице");
-            }
-            if (herodo5.IsChecked==true)
-            {
-                persloglist.Add("Деградирует");
-            }
-            if (herodo6.IsChecked == true)
-            {
-                persloglist.Add("Гуляет");
-            }
-            perslog.Items.Refresh();
             dispatcherTimer.Interval = new TimeSpan(0, 0, rnd.Next(2, 16));
         }
 
