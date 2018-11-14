@@ -41,7 +41,30 @@ namespace godgame
 
         private void Clock(object sender, EventArgs e)
         {
-            persloglist.Add("Деградирует");
+            if (herodo1.IsChecked==true)
+            {
+                persloglist.Add("Агрессивно разгуливает по своему двору");
+            }
+            if (herodo2.IsChecked == true)
+            {
+                persloglist.Add("Идет домой...");
+            }
+            if (herodo3.IsChecked == true)
+            {
+                persloglist.Add("Жрет хрень, которую нашел");
+            }
+            if (herodo4.IsChecked == true)
+            {
+                persloglist.Add("Спит на улице");
+            }
+            if (herodo5.IsChecked==true)
+            {
+                persloglist.Add("Деградирует");
+            }
+            if (herodo6.IsChecked == true)
+            {
+                persloglist.Add("Гуляет");
+            }
             perslog.Items.Refresh();
             dispatcherTimer.Interval = new TimeSpan(0, 0, rnd.Next(2, 16));
         }
