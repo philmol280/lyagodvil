@@ -16,6 +16,8 @@ namespace godgame
         List<string> wholist = new List<string>();
         List<string> whoselist = new List<string>();
         List<string> inwitchlist = new List<string>();
+        List<string> persloglist = new List<string>();
+        List<string> femloglist = new List<string>();
         System.Windows.Threading.DispatcherTimer dispatcherTimer;
         public MainWindow()
         {
@@ -24,23 +26,29 @@ namespace godgame
             who.ItemsSource = wholist;
             whose.ItemsSource = whoselist;
             inwitch.ItemsSource = inwitchlist;
+            perslog.ItemsSource = persloglist;
+            femlog.ItemsSource = femloglist;
+
+
 
             //              А ВОТ И ТАЙМЕР ПОДЪЕХАЛ)
             dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(Clock);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, rnd.Next(2, 16));
             dispatcherTimer.Start();
 
         }
 
         private void Clock(object sender, EventArgs e)
         {
-            
+            persloglist.Add("Деградирует");
+            perslog.Items.Refresh();
+            dispatcherTimer.Interval = new TimeSpan(0, 0, rnd.Next(2, 16));
         }
 
         private void Addwhich_Click(object sender, RoutedEventArgs e)
         {
-            if (saveline.Text=="")
+            if (saveline.Text == "")
             {
                 MessageBox.Show("Вы не ввели данные!", "Ошибка");
             }
@@ -144,26 +152,27 @@ namespace godgame
 
         private void Write2_Click(object sender, RoutedEventArgs e)
         {
-                StreamWriter list1 = new StreamWriter("list1.god");
-                foreach (var item in which.Items)
-                    list1.WriteLine(item.ToString());
-                list1.Close();
+            StreamWriter list1 = new StreamWriter("list1.god");
+            foreach (var item in which.Items)
+                list1.WriteLine(item.ToString());
+            list1.Close();
 
-                StreamWriter list2 = new StreamWriter("list2.god");
-                foreach (var item in who.Items)
-                    list2.WriteLine(item.ToString());
-                list2.Close();
+            StreamWriter list2 = new StreamWriter("list2.god");
+            foreach (var item in who.Items)
+                list2.WriteLine(item.ToString());
+            list2.Close();
 
-                StreamWriter list3 = new StreamWriter("list3.god");
-                foreach (var item in inwitch.Items)
-                    list3.WriteLine(item.ToString());
-                list3.Close();
+            StreamWriter list3 = new StreamWriter("list3.god");
+            foreach (var item in inwitch.Items)
+                list3.WriteLine(item.ToString());
+            list3.Close();
 
-                StreamWriter list4 = new StreamWriter("list4.god");
-                foreach (var item in whose.Items)
-                    list4.WriteLine(item.ToString());
-                list4.Close();
+            StreamWriter list4 = new StreamWriter("list4.god");
+            foreach (var item in whose.Items)
+                list4.WriteLine(item.ToString());
+            list4.Close();
             MessageBox.Show("Успешно сохранено", "ОК");
         }
     }
 }
+// РАБОТАЛИ НАД НЕДОПРОЕКТОМ: МАЗУРЕЦ КИРИЛЛ, 
